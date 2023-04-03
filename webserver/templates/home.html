@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pharmacy Storage</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Welcome to Pharmacy Storage</h1>
+			<nav>
+				<ul>
+					<li><a href="{{ url_for('add_drug') }}">Add Drugs from Pharmacy Storage</a></li>
+					<li><a href="{{ url_for('take_drug') }}">Take Drugs from Pharmacy Storage</a></li>
+					<li><a href="{{ url_for('pharmacy_storage') }}">View Pharmacy Storage</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<form action="{{ url_for('search') }}" method="POST">
+				<label for="drug_id">Search for Drug Information:</label>
+				<input type="text" id="drug_id" name="drug_id">
+				<input type="submit" value="Submit">
+			</form>
+		</main>
+	</div>
+</body>
+</html>

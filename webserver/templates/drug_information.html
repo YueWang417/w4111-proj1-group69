@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pharmacy Storage - Drug Information</title>
+</head>
+<body>
+    <h1>Pharmacy Storage - Drug Information</h1>
+    {% if drug_name %}
+        <table>
+            <tr>
+                <th>Drug Name</th>
+                <td>{{ drug_name }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ category }}</td>
+            </tr>
+            <tr>
+                <th>Safety Stock</th>
+                <td>{{ safety_stock }}</td>
+            </tr>
+            <tr>
+                <th>Dosage</th>
+                <td>{{ dosage }}</td>
+            </tr>
+        </table>
+    {% else %}
+        <p>No drug information available.</p>
+    {% endif %}
+<a href="{{ url_for('home') }}">Back to Home Page</a>
+</body>
+</html>
